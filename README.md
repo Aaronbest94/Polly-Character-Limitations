@@ -16,8 +16,8 @@ Implementation
 	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.20.min.js"></script><br>
 	 <script src="/[ file_path ]/Polly.js"></script><br>
     
-4.Add the audio player just before the closing </body> tag.<br>
-	  /*<audio controls id="audioPlayer" src="#" style="display: none;"> </audio>*/
+4.Add the audio player just before the closing body tag.<br>
+	  <audio controls id="audioPlayer" src="#" style="display: none;"> </audio>
   
 5.Set the ‘textForSpeech’ Id to whichever Html element you wish to read:
 	  id="textForSpeech"
