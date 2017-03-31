@@ -1,5 +1,5 @@
 # Polly-Character-Limitations
-Overcome the Polly character limitation Issue 
+Overcome the Polly character limitation Issue.
 
 <p>Amazom Polly only allows 1500 characters to be set to their API at a time which is annoying when trying to send larger chuncks of text.<br><br> 
 
