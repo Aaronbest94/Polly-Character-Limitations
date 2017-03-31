@@ -13,11 +13,11 @@ Implementation
   });
 
 3. Include the script tags in the head of your site to reference Polly’s sdk & the new Polly.js file:
-	  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.20.min.js"></script>
-	  <script src="/[ file_path ]/Polly.js"></script>
+	  '<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.20.min.js"></script>'
+	  '<script src="/[ file_path ]/Polly.js"></script>'
     
 4. Add the audio player just before the closing </body> tag.
-	  <audio controls id="audioPlayer" src="#" style="display: none;"></audio>
+	  '<audio controls id="audioPlayer" src="#" style="display: none;"></audio>'
   
 5. Set the ‘textForSpeech’ Id to whichever Html element you wish to read:
 	  id="textForSpeech"
