@@ -2,7 +2,7 @@
 Overcome the Polly character limitation Issue 
 
 
-Implementation 
+<b>Implementation</b> 
 
 1.Download Polly.js file to your computer and Upload it to your server.
 
