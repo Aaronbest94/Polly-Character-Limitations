@@ -1,11 +1,11 @@
 # Polly-Character-Limitations
 Overcome the Polly character limitation Issue.
 
-<p>Amazom Polly only allows 1500 characters to be set to their API at a time which is annoying when trying to send larger chuncks of text.<br><br> 
+<p>AWS only allows 1500 characters to be sent to their Polly API at a time which is annoying when trying to send larger amounts of text.<br><br> 
 
 This Polly.js file breaks the large amounts of text in 230 word chuncks sends them to the API one after another then stitches all the responses together before buffering the MP3 file.<br> <br>
 
-The output is one large audio file when all your desired text.
+The output is one large mp3 file with all your desired text.
 </p>
 
 <b>Implementation:</b> 
