@@ -40,6 +40,7 @@ window.onload = function(){
 			text = check[0];
 			x += maxWords;
 		 }
+		 console.log(textArray);
 	}else{
 			//If the amount of Words are not longer than 230 then set text to the first item in the array.
 			textArray.push(text);
@@ -64,22 +65,28 @@ window.onload = function(){
 				}
 				//Run If Statmen when looping is complete.
 				if(textArray.length == calls){
+					console.log(textArray);
 					var arrarylength = 0;
 					var z = 0;
 					//Find length of all items in bufferarray.
 					bufferarray.forEach(function() {
 						arrarylength += bufferarray[z].length;
 						z++;
+
 				 });
+
 				 //Create final Int8Array(masterMp3) array and set its length to the overall length of all bufferarrays (arrarylength).
 				 var masterMp3 = new Int8Array(arrarylength);
+				 var arrarylength = 0;
 				 var w = 0;
+
 				 //Combine all 'bufferarrays' items into final 'Int8Array'(masterMp3) array.
 				 bufferarray.forEach(function() {
+					 arrarylength += bufferarray[w].length;
 					 if(w == 0){
 					 		masterMp3.set(bufferarray[w]);
 					 }else{
-					    masterMp3.set(bufferarray[w], bufferarray[w-1]);
+					    masterMp3.set(bufferarray[w] , (arrarylength - bufferarray[w].length));
 				 	 }
 					 w++;
 					});
@@ -121,6 +128,7 @@ function makeCall(params, textArray, calls){
 	let polly = new AWS.Polly();
 	params.Text = textArray[calls];
 	//The Call to Polly.
+	//console.log(textArray[calls]);
 	if (textArray[calls]){
 	polly.synthesizeSpeech(params, function(err, data) {
 			if (err){
